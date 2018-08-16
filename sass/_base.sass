@@ -4,8 +4,62 @@ body
     //CSS styling everywhere else will use (em)s in place of (px)s. 
     //This statement sets the baseline for those (em)s
     font: 16px $body-font
+h1
+    text-transform: uppercase
+    text-align: center
+    font: 400 1.75em $nav-font
+a
+    color: $link-color
+    &:hover
+      color: $link-hover
+    &:visited
+      color: $link-color
 
+section.section.group p, footer.footer
+    padding: 1.6%
 .wrapper
     // Provides automatic centering for content. The left-right margins are set automatically based on 100% subtracted from width
-    width: 80%
+    width: 100%
     margin: 0 auto
+
+//Add the .btn class to buttons to make them sexy!
+.btn
+  position: relative
+  display: block
+  margin: 30px auto
+  padding: 10px
+  overflow: hidden
+  border-width: 0
+  outline: none
+  border-radius: 2px
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6)
+  background-color: $link-color
+  color: $white
+  transition: background-color .3s
+  &:hover, &:focus
+    background-color: $link-hover
+    cursor: pointer
+  > *
+    position: relative
+  span
+    display: block
+    padding: 12px 24px
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    display: block
+    width: 0
+    padding-top: 0
+    border-radius: 100%
+    background-color: rgba(236, 240, 241, 0.3)
+    -webkit-transform: translate(-50%, -50%)
+    -moz-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    -o-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+  &:active:before
+    width: 120%
+    padding-top: 120%
+    transition: width .2s ease-out, padding-top .2s ease-out

@@ -1,11 +1,32 @@
+div.logo
+    position: relative
+    border: 1px solid black
+    width: 125px
+    height: 125px
+
+section.hero
+    width: 100%
+    height: 275px
+    border-bottom: 1px dotted black
+
 section#aboutblurb
-    width: 60%
+    width: 20%
     margin: 0 auto
+
 section#carousel
+    background: darken($white, 10%)
+
+section#ourMenu
+    width: 100%
+    margin: 0 auto
+    background: darken($white, 7.5%)
+    .btn
+        display: flex
+        justify-content: center
+
+footer.footer
     background: $gray
-
-
-
+    text-align: center
 @media only screen and (max-width: 480px)
     section#aboutblurb
         width: 90%
